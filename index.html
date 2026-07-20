@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Camera POS</title>
+
+<style>
+body{
+    margin:0;
+    background:#111;
+    color:white;
+    text-align:center;
+    font-family:sans-serif;
+}
+
+video{
+    width:100%;
+    max-width:700px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+button{
+    margin-top:20px;
+    padding:15px 30px;
+    font-size:20px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>📷 Camera POS</h1>
+
+<video id="video" autoplay playsinline></video>
+
+<br>
+
+<button onclick="openCamera()">
+เปิดกล้อง
+</button>
+
+<script>
+
+async function openCamera(){
+
+    try{
+
+        const stream=await navigator.mediaDevices.getUserMedia({
+
+            video:{
+                facingMode:"environment"
+            }
+
+        });
+
+        video.srcObject=stream;
+
+    }
+
+    catch(e){
+
+        alert(e);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
