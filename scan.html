@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>Scan</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h2>📷 Scan Product</h2>
+
+</header>
+
+<div class="cameraBox">
+
+<video
+id="video"
+autoplay
+playsinline>
+</video>
+
+<canvas
+id="canvas"
+style="display:none">
+</canvas>
+
+</div>
+
+<div class="result">
+
+<div id="productName">
+
+ยังไม่พบสินค้า
+
+</div>
+
+<div id="confidence">
+
+0%
+
+</div>
+
+<button id="scanBtn">
+
+สแกนสินค้า
+
+</button>
+
+</div>
+
+<script src="js/camera.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
